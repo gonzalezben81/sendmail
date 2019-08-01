@@ -52,10 +52,9 @@ server <- function(input, output) {
             replyTo = c("Reply to someone else <someone.else@gmail.com>"),
             subject = input$subject,
             body = input$body,
-            smtp = list(host.name = "smtp.gmail.com", port = 465, user.name = input$user, passwd = input$pass, ssl = TRUE),
-            attach.files = input$file,
-            authenticate = TRUE,
-            send = TRUE)})
+            smtp = list(host.name = "smtp.gmail.com", port = 587, user.name = input$user, passwd = input$pass, ssl = TRUE),
+            authenticate = TRUE
+)})
 
 }
 
